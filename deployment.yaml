@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devops_e2e_pipeline-deployment
+  name: devops-e2e-pipeline-deployment
 spec:
   selector:
     matchLabels:
-      app: devops_e2e_pipeline
+      app: devops-e2e-pipeline
   template:
     metadata:
       labels:
-        app: devops_e2e_pipeline
+        app: devops-e2e-pipeline
     spec:
       containers:
-        - name: devops_e2e_pipeline
+        - name: devops-e2e-pipeline
           image: ashlesh1910/devops_e2e_pipeline:1.0.0-26
           resources:
             limits:
