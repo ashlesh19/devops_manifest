@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops_e2e_pipeline
+spec:
+  selector:
+    matchLabels:
+      app: devops_e2e_pipeline
+  template:
+    metadata:
+      labels:
+        app: devops_e2e_pipeline
+    spec:
+      containers:
+        - name: devops_e2e_pipeline
+          image: dmancloud/devops_e2e_pipeline:1.0.0-26
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8080
