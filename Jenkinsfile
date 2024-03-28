@@ -21,7 +21,7 @@ pipeline {
         stage('Checkout from SCM-github') {
             steps {
                 //SCM used to fetch our jenkins file 
-               git branch: 'master', credentialsId: 'github', url: 'https://github.com/ashlesh19/devops_manifest'
+               git branch: 'main', credentialsId: 'github', url: 'https://github.com/ashlesh19/devops_manifest'
             }
         }
 
