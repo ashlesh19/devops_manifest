@@ -7,7 +7,7 @@ pipeline {
         maven "Maven3"
     }
     environment{
-        APP_NAME = "devops-manifest-pipeline"
+        APP_NAME = "devops_e2e_pipeline"
     }
 
     stages {
