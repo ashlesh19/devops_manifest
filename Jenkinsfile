@@ -45,7 +45,7 @@ pipeline {
                     git add deployment.yaml
                     git commit -m "updated Deployment Manifest"
                 """
-                withCredentials([gitUsernamePassword(credentialsId: 'github-pat', gitToolName: 'Defaut')]) {
+                withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Defaut')]) {
                     sh "git push https://github.com/ashlesh19/devops_manifest main"
                 }
 
