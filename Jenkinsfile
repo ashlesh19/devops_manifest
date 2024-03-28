@@ -26,7 +26,7 @@ pipeline {
         }
 
 
-        stage('Checkout from SCM-github') {
+        stage('update the deployment from Tags') {
             steps {
                 sh """
                     cat deployment.yaml
